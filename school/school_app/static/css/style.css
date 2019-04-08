@@ -1,0 +1,42 @@
+html {
+  scroll-behavior: smooth; }
+
+body {
+  margin-top: 105px; }
+
+.navbar {
+  box-shadow: 2px 2px 5px #3292a6;
+  opacity: 0.9;
+  background: #fff; }
+  .navbar .nav-item {
+    font-size: 1.3rem;
+    padding-right: 15px; }
+
+#showcase {
+  position: relative;
+  background: url("../img/school.jpeg") no-repeat;
+  background-size: 100%;
+  min-height: 700px;
+  color: #7c6060; }
+
+#tes {
+  text-align: center; }
+  #tes .h1 {
+    font-size: 5.9vw; }
+
+.info-header {
+  width: 50%;
+  margin: auto;
+  border-bottom: 1px; }
+
+#author img {
+  margin-top: -50px; }
+
+#author .fa {
+  font-size: 25px; }
+
+#author .card:hover {
+  background: #3292a6;
+  color: #fff; }
+  #author .card:hover .fa {
+    color: #fff; }

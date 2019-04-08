@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>School</title>
+  <link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
+  <link rel="stylesheet" href={% static "css/bootstrap.css" %}>
+  <link rel="stylesheet" href={% static "css/style.css" %}>
+
+  <!-- Favicons -->
+  <link href={% static "img/favicon.png" %} rel="icon">
+  <link href={% static "img/apple-touch-icon.png"} rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Poppins:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href={% static "lib/bootstrap/css/bootstrap.min.css" %} rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href={% static "lib/font-awesome/css/font-awesome.min.css" %} rel="stylesheet">
+  <link href={% static "lib/animate/animate.min.css" %} rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href={% static "css/style.css" %} rel="stylesheet">
+
+</head>
+<body id="home">
+  <nav class="navbar navbar-expand-md navbar-light py-4 fixed-top">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="{% static 'img/logo-ex-7.png' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">School</h3>
+
+      </a>
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+               <li class="nav-item">
+                 <a href="#home" class="nav-link">HOME</a>
+               </li>
+               <li class="nav-item">
+                  <a href="#about" class="nav-link">MESSAGE</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#author" class="nav-link">ABOUT US</a>
+                  </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link">CONTACTS</a>
+                </li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+  
+
+  <!--SHOWCASE-->
+  <section id="showcase" class="py-5">
+    <div class="primary-overlay text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-7  text-center">
+            <div>
+              <h1 id="tes" class="display-2 mt-5 text-muted ">
+                MUNNALAL RAMESHWAR PRASHAD JUNIOR HIGH SCHOOL
+              </h1>
+            </div>
+            <p class="lead">Talbehat <br>
+              Dist-Lalitpur
+            </p>
+            <a href="" class="btn btn-outline-secondary bt-lg text-white"><i class="fa fa-arrow-right"></i>Read more</a>
+          </div>
+          
+          <div class="col-lg-5 ">
+      
+            <img src="{% static 'img/book.png' %}" alt="" class="img-fluid d-none d-lg-block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="notice" class="py-5 text-center bg-light">
+    <div class="container">
+          <div class="info-header">
+            <h1 class="text-primary ">
+              NOTICE
+            </h1>
+      </div>
+    </div>
+  </section>
+
+  
+  <!--sdfsdfdsf-->
+ 
+
+
+  <section id="boxes" class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col md-3">
+          <div class="card text-center border-primary">
+            <div class="card-body">
+              <h3 class="text-primary">ADMISSION OPEN</h3>
+              <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col md-3">
+            <div class="card text-center border-primary">
+              <div class="card-body">
+                <h3 class="text-primary">VACANCY FOR TEACHERS</h3>
+                <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
+              </div>
+            </div> 
+        </div>
+        <div class="col md-3">
+          <div class="card text-center border-primary">
+            <div class="card-body">
+              <h3 class="text-primary">VACANCY FOR PRINCIPLE</h3>
+              <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
+            </div>
+          </div>
+      </div>
+        <div class="col md-3">
+            <div class="card text-center border-primary">
+              <div class="card-body">
+                <h3 class="text-primary">VACANCY FOR VICE-PRINCIPLE</h3>
+                <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--ABOUT-->
+
+  <section id="about" class="py-5 text-center bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="info-header mb-5">
+            <h1 class="text-primary pb-3">
+              WHY THIS BOOK??
+            </h1>
+            <p class="lead pb-3">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita sequi ratione, ipsum autem corporis!
+            </p>
+          </div>
+
+          <!--accordian-->
+
+          <div id="accordion" role="tablist"></div>
+          <div class="card">
+            <div class="card-header" id="heading1">
+              <h5 class="mb-0">
+                <div href="#collapse1" data-toggle="collapse" data-parent="#accordion">
+                  <i class="fa fa-arrow-circle-down"> </i> FOUNDER'S MESSAGE...
+                </div>
+              </h5>
+            </div>
+
+            <div id="colllapse1" class="collapse show">
+              <div class="card-body ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consequuntur minima enim temporibus quis. Ab voluptates officiis cumque impedit dignissimos esse eius laudantium expedita eveniet numquam dicta repellat voluptas consequuntur tempore, sit molestiae, perspiciatis voluptatibus sint maxime error vel amet aliquam iste quos! Tempora maxime maiores nesciunt sed amet aliquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequuntur officia, reiciendis, hic ab ullam ea magnam quisquam dolore repellat aut. Voluptatum, animi ipsum quisquam, doloremque numquam laudantium nisi debitis, recusandae dolores consectetur iusto aspernatur esse. Assumenda voluptatibus natus necessitatibus nam iure quaerat quod in alias, quam, incidunt dolorum saepe.</div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header" id="heading2">
+              <h5 class="mb-0">
+                <div href="#collapse2" data-toggle="collapse" data-parent="#accordion">
+                  <i class="fa fa-arrow-circle-down"> </i> PRINCIPLE'S MESSAGE
+                </div>
+              </h5>
+            </div>
+
+            <div id="colllapse2" class="collapse show">
+              <div class="card-body ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consequuntur minima enim temporibus quis. Ab voluptates officiis cumque impedit dignissimos esse eius laudantium expedita eveniet numquam dicta repellat voluptas consequuntur tempore, sit molestiae, perspiciatis voluptatibus sint maxime error vel amet aliquam iste quos! Tempora maxime maiores nesciunt sed amet aliquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequuntur officia, reiciendis, hic ab ullam ea magnam quisquam dolore repellat aut. Voluptatum, animi ipsum quisquam, doloremque numquam laudantium nisi debitis, recusandae dolores consectetur iusto aspernatur esse. Assumenda voluptatibus natus necessitatibus nam iure quaerat quod in alias, quam, incidunt dolorum saepe.</div>
+
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--authors-->
+  <section id="author" class="my-5 text-center">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+            <div class="info-header mb-5">
+                <h1 class="text-primary pb-3">
+                  Authors??
+                </h1>
+                <p class="lead pb-3">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita sequi ratione, ipsum autem corporis!
+                </p>
+              </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-md-6">
+          <div class="card">
+            <div class="card-bory">
+               
+              <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
+              <h3>Susan</h3>
+              <h5 class="text-muted">Lead Writer</h5>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
+              <div class="d-flex flex-row justify-content-center">
+                <div class="p-4">
+                  <a href="#" class=""><i class="fa fa-facebook"> </i></a>
+                </div>
+                
+                <div class="p-4">
+                    <a href="#" class=""><i class="fa fa-twitter"> </i></a>
+                </div>
+                <div class="p-4">
+                    <a href="#" class=""><i class="fa fa-instagram"> </i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-bory">
+                <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
+                <h3>Susan</h3>
+                <h5 class="text-muted">Lead Writer</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
+                <div class="d-flex flex-row justify-content-center">
+                  <div class="p-4">
+                    <a href="#" class=""><i class="fa fa-facebook"> </i></a>
+                  </div>
+                  <div class="p-4">
+                      <a href="#" class=""><i class="fa fa-twitter"> </i></a>
+                  </div>
+                  <div class="p-4">
+                      <a href="#" class=""><i class="fa fa-instagram"> </i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-bory">
+                <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
+                <h3>Susan</h3>
+                <h5 class="text-muted">Lead Writer</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
+                <div class="d-flex flex-row justify-content-center">
+                  <div class="p-4">
+                    <a href="#" class=""><i class="fa fa-facebook"> </i></a>
+                  </div>
+                  <div class="p-4">
+                      <a href="#" class=""><i class="fa fa-twitter"> </i></a>
+                  </div>
+                  <div class="p-4">
+                      <a href="#" class=""><i class="fa fa-instagram"> </i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="card">
+              <div class="card-bory">
+                <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
+                <h3>Susan</h3>
+                <h5 class="text-muted">Lead Writer</h5>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
+                <div class="d-flex flex-row justify-content-center">
+                  <div class="p-4">
+                    <a href="#" class=""><i class="fa fa-facebook"> </i></a>
+                  </div>
+                  <div class="p-4">
+                      <a href="#" class=""><i class="fa fa-twitter"> </i></a>
+                  </div>
+                  <div class="p-4">
+                      <a href="#" class=""><i class="fa fa-instagram"> </i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+
+   <section id="contact" class="bg-light py-5">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-9">
+          <h3>Send Us Message</h3>
+          <p class="lead">Let us know your response...</p>
+          <div class="form">
+            <div class="form-group">
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                <input type="text" class="form-control" placeholder="Name">
+              </div>
+            </div>
+          </div>
+            <div class="form-group">
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                <input type="email" class="form-control" placeholder="Email">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-group input-group-lg">
+                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                <input type="Phone" class="form-control" placeholder="Mobile Number">
+              </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                  <textarea class="form-control" placeholder="Message" rows="5"></textarea>
+                </div>
+              </div>
+              <input type="Submit" value="Submit " class="btn btn-primary btn-block btn-lg">
+        </div>
+         <div class="col-lg-3 align-self-center">
+           <img src="{% static 'img/mlogo.png' %}" alt="" class="img-fluid">
+
+           <div class="row">
+             <div class="col">
+               <h5>Phone No.:XXXXXXXXXX</h5>
+             </div>
+           </div>
+
+         </div>
+       </div>
+     </div>
+   </section>
+
+
+   <section id="map" class="bg-light py-5">
+     <div class="container">
+       <div class="row">
+         <div class="col-lg-6 align-self-center" >
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.6465256135557!2d78.43179681484212!3d25.046067083966634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3979dae0dfd58d53%3A0xf8c1b1e8d0bdc2d5!2sSBI+ATM!5e0!3m2!1sen!2sin!4v1554312906106!5m2!1sen!2sin" width="auto" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+         </div>
+       </div>
+     </div>
+   </section>
+
+   <footer id="main-footer" class="py-5 bg-primary text-white">
+     <div class="container">
+       <div class="row text-center" >
+         <div class="col-md-6 ml-auto"></div>
+         <p class="lead">Copyright &copy; 2017</p>
+       </div> 
+     </div>
+
+   </footer>
+
+
+
+ <script src="js/jquery.min.js"></script>
+ <script src="js/popper.min.js"></script>
+ <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

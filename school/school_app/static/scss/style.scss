@@ -1,0 +1,62 @@
+$primary : #3292a6;
+$primary-overlay:rgba(5, 35, 41, 0.8);
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    margin-top:105px;
+}
+
+.navbar{
+    box-shadow: 2px 2px 5px $primary;
+    opacity:0.9;
+    background:#fff;
+    .nav-item{
+        font-size:1.3rem;
+        padding-right:15px;
+    
+    }
+} 
+
+#showcase{
+    
+    position: relative;;
+    background: url('../img/school.jpeg') no-repeat;
+    background-size: 100%;
+    min-height: 700px;
+    color: rgb(124, 96, 96)
+
+
+  
+}
+#tes{
+    text-align: center;
+    .h1{
+        font-size: 5.9vw;
+    }
+}
+
+
+.info-header{
+    width: 50%;
+    margin:auto;
+    border-bottom:1px;
+
+}
+
+#author{
+    img{
+        margin-top: -50px; 
+    }
+    .fa{
+        font-size:25px;
+    }
+
+    .card:hover{
+        background: $primary;
+        color: #fff;
+        .fa{
+            color: #fff; 
+        }
+    }
+}
