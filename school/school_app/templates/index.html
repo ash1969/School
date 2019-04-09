@@ -210,92 +210,29 @@
 
       </div>
       <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="card">
-            <div class="card-bory">
-               
-              <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
-              <h3>Susan</h3>
-              <h5 class="text-muted">Lead Writer</h5>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
-              <div class="d-flex flex-row justify-content-center">
-                <div class="p-4">
-                  <a href="#" class=""><i class="fa fa-facebook"> </i></a>
-                </div>
-                
-                <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-twitter"> </i></a>
-                </div>
-                <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-instagram"> </i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% for faculty in faculties %}
         <div class="col-lg-3 col-md-6">
             <div class="card">
               <div class="card-bory">
-                <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
-                <h3>Susan</h3>
-                <h5 class="text-muted">Lead Writer</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
+                <img src="{{ faculty.image.url }}" alt="" class="img-fluid rounder-circle w-50 mb-3">
+                <h3>{{ faculty.name }}</h3>
+                <h5 class="text-muted">{{ faculty.designation }}</h5>
+                <p>{{ faculty.description }}</p>
                 <div class="d-flex flex-row justify-content-center">
                   <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-facebook"> </i></a>
+                    <a href="{{ faculty.url_Facebook }}" class=""><i class="fa fa-facebook"> </i></a>
                   </div>
                   <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-twitter"> </i></a>
+                      <a href="{{ faculty.url_Twitter }}" class=""><i class="fa fa-twitter"> </i></a>
                   </div>
                   <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-instagram"> </i></a>
+                      <a href="{{ faculty.url_Instagram }}" class=""><i class="fa fa-instagram"> </i></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-bory">
-                <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
-                <h3>Susan</h3>
-                <h5 class="text-muted">Lead Writer</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-facebook"> </i></a>
-                  </div>
-                  <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-twitter"> </i></a>
-                  </div>
-                  <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-instagram"> </i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-bory">
-                <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
-                <h3>Susan</h3>
-                <h5 class="text-muted">Lead Writer</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-facebook"> </i></a>
-                  </div>
-                  <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-twitter"> </i></a>
-                  </div>
-                  <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-instagram"> </i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        {% endfor %}
       </div>
     </div>
   </section>
