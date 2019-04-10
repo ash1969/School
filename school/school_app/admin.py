@@ -5,3 +5,7 @@ from .models import *
 @admin.register(Faculties)
 class FacultyAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Messages)
+class MessageAdmin(admin.ModelAdmin):
+    pass

@@ -46,3 +46,19 @@ class Faculties(models.Model):
         ordering = ['-created_at']
         db_table = 'faculties'
         verbose_name_plural = 'Faculties'
+
+
+class Messages(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    mobile = models.CharField(max_length=10)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=False, auto_now_add=True)
+
+    class Meta:
+        managed = True
+        db_table = 'messages'
+        verbose_name_plural = 'Messages'
+    def __self__(self):
+        return self.name
