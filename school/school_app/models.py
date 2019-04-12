@@ -62,3 +62,17 @@ class Messages(models.Model):
         verbose_name_plural = 'Messages'
     def __self__(self):
         return self.name
+
+class Notices(models.Model):
+    title = models.CharField(max_length=100)
+    content = models.TextField()
+    file = models.FileField()
+    created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=False, auto_now_add=True)
+
+    class Meta:
+        managed = True
+        db_table = 'notices'
+        verbose_name_plural = 'Notices'
+    def __self__(self):
+        return self.title

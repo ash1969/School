@@ -9,3 +9,7 @@ class FacultyAdmin(admin.ModelAdmin):
 @admin.register(Messages)
 class MessageAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Notices)
+class NoticeAdmin(admin.ModelAdmin):
+    pass

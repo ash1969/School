@@ -7,6 +7,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 
 def index(request):
     faculties=Faculties.objects.all()
+    notices=Notices.objects.all()
     form = Messageform(request.POST or None)
     if request.method == 'POST':
         if form.is_valid():
@@ -14,5 +15,5 @@ def index(request):
             return redirect('index')
         else:
             return HttpResponse("Invalid Credentials")
-    args = {'faculties': faculties, 'form':form}
+    args = {'notices': notices, 'faculties': faculties, 'form':form}
     return render(request, 'index.html', args)

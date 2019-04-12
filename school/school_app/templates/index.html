@@ -103,38 +103,16 @@
   <section id="boxes" class="py-5">
     <div class="container">
       <div class="row">
+        {% for notice in notices %}
         <div class="col md-3">
           <div class="card text-center border-primary">
             <div class="card-body">
-              <h3 class="text-primary">ADMISSION OPEN</h3>
-              <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
+              <h3 class="text-primary"><a href="{{ notice.file.url }}" target="_blank">{{ notice.title }}</a></h3>
+              <p class="text-muted">{{ notice.content }}</p>
             </div>
           </div>
         </div>
-        <div class="col md-3">
-            <div class="card text-center border-primary">
-              <div class="card-body">
-                <h3 class="text-primary">VACANCY FOR TEACHERS</h3>
-                <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
-              </div>
-            </div> 
-        </div>
-        <div class="col md-3">
-          <div class="card text-center border-primary">
-            <div class="card-body">
-              <h3 class="text-primary">VACANCY FOR PRINCIPLE</h3>
-              <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
-            </div>
-          </div>
-      </div>
-        <div class="col md-3">
-            <div class="card text-center border-primary">
-              <div class="card-body">
-                <h3 class="text-primary">VACANCY FOR VICE-PRINCIPLE</h3>
-                <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
-              </div>
-            </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
