@@ -103,38 +103,16 @@
   <section id="boxes" class="py-5">
     <div class="container">
       <div class="row">
+        {% for notice in notices %}
         <div class="col md-3">
           <div class="card text-center border-primary">
             <div class="card-body">
-              <h3 class="text-primary">ADMISSION OPEN</h3>
-              <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
+              <h3 class="text-primary"><a href="{{ notice.file.url }}" target="_blank">{{ notice.title }}</a></h3>
+              <p class="text-muted">{{ notice.content }}</p>
             </div>
           </div>
         </div>
-        <div class="col md-3">
-            <div class="card text-center border-primary">
-              <div class="card-body">
-                <h3 class="text-primary">VACANCY FOR TEACHERS</h3>
-                <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
-              </div>
-            </div> 
-        </div>
-        <div class="col md-3">
-          <div class="card text-center border-primary">
-            <div class="card-body">
-              <h3 class="text-primary">VACANCY FOR PRINCIPLE</h3>
-              <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
-            </div>
-          </div>
-      </div>
-        <div class="col md-3">
-            <div class="card text-center border-primary">
-              <div class="card-body">
-                <h3 class="text-primary">VACANCY FOR VICE-PRINCIPLE</h3>
-                <p class="text-muted">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis, hic.</p>
-              </div>
-            </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -210,92 +188,29 @@
 
       </div>
       <div class="row">
-        <div class="col-lg-3 col-md-6">
-          <div class="card">
-            <div class="card-bory">
-               
-              <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
-              <h3>Susan</h3>
-              <h5 class="text-muted">Lead Writer</h5>
-              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
-              <div class="d-flex flex-row justify-content-center">
-                <div class="p-4">
-                  <a href="#" class=""><i class="fa fa-facebook"> </i></a>
-                </div>
-                
-                <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-twitter"> </i></a>
-                </div>
-                <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-instagram"> </i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% for faculty in faculties %}
         <div class="col-lg-3 col-md-6">
             <div class="card">
               <div class="card-bory">
-                <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
-                <h3>Susan</h3>
-                <h5 class="text-muted">Lead Writer</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
+                <img src="{{ faculty.image.url }}" alt="" class="img-fluid rounder-circle w-50 mb-3">
+                <h3>{{ faculty.name }}</h3>
+                <h5 class="text-muted">{{ faculty.designation }}</h5>
+                <p>{{ faculty.description }}</p>
                 <div class="d-flex flex-row justify-content-center">
                   <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-facebook"> </i></a>
+                    <a href="{{ faculty.url_Facebook }}" class=""><i class="fa fa-facebook"> </i></a>
                   </div>
                   <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-twitter"> </i></a>
+                      <a href="{{ faculty.url_Twitter }}" class=""><i class="fa fa-twitter"> </i></a>
                   </div>
                   <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-instagram"> </i></a>
+                      <a href="{{ faculty.url_Instagram }}" class=""><i class="fa fa-instagram"> </i></a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-bory">
-                <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
-                <h3>Susan</h3>
-                <h5 class="text-muted">Lead Writer</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-facebook"> </i></a>
-                  </div>
-                  <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-twitter"> </i></a>
-                  </div>
-                  <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-instagram"> </i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        <div class="col-lg-3 col-md-6">
-            <div class="card">
-              <div class="card-bory">
-                <img src="{% static 'img/person1.jpg' %}" alt="" class="img-fluid rounder-circle w-50 mb-3">
-                <h3>Susan</h3>
-                <h5 class="text-muted">Lead Writer</h5>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima asperiores incidunt quos doloribus hic soluta corporis. Unde numquam suscipit ipsum architecto corrupti doloremque, ut odio assumenda dicta quas, facilis consequuntur. Veritatis quidem, dolor alias autem id minima maiores provident? Ab sequi magnam iure consequuntur est dolores eveniet exercitationem dolorum impedit!</p>
-                <div class="d-flex flex-row justify-content-center">
-                  <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-facebook"> </i></a>
-                  </div>
-                  <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-twitter"> </i></a>
-                  </div>
-                  <div class="p-4">
-                      <a href="#" class=""><i class="fa fa-instagram"> </i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        {% endfor %}
       </div>
     </div>
   </section>
@@ -307,33 +222,12 @@
           <h3>Send Us Message</h3>
           <p class="lead">Let us know your response...</p>
           <div class="form">
-            <div class="form-group">
-              <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                <input type="text" class="form-control" placeholder="Name">
-              </div>
+               <form method="POST">
+                 {% csrf_token %}
+                 {{ form }}
+                <button type="submit">Save</button>
+               </form>
             </div>
-          </div>
-            <div class="form-group">
-              <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                <input type="email" class="form-control" placeholder="Email">
-              </div>
-            </div>
-
-            <div class="form-group">
-              <div class="input-group input-group-lg">
-                <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-                <input type="Phone" class="form-control" placeholder="Mobile Number">
-              </div>
-            </div>
-            <div class="form-group">
-                <div class="input-group input-group-lg">
-                  <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
-                  <textarea class="form-control" placeholder="Message" rows="5"></textarea>
-                </div>
-              </div>
-              <input type="Submit" value="Submit " class="btn btn-primary btn-block btn-lg">
         </div>
          <div class="col-lg-3 align-self-center">
            <img src="{% static 'img/mlogo.png' %}" alt="" class="img-fluid">
