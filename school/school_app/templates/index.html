@@ -9,7 +9,7 @@
   <meta content="" name="keywords">
   <meta content="" name="description">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>School</title>
+  <title>MLRP School</title>
   <link rel="stylesheet" href={% static "css/font-awesome.min.css" %}>
   <link rel="stylesheet" href={% static "css/bootstrap.css" %}>
   <link rel="stylesheet" href={% static "css/style.css" %}>
@@ -66,22 +66,13 @@
       });
     })
   </script>
- 
-
-
-
-
-
-
-
-
 
 </head>
 <body id="home">
   <nav class="navbar navbar-expand-md navbar-light py-4 fixed-top">
     <div class="container">
       <a href="#" class="navbar-brand">
-        <img src="{% static 'img/logo.png' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRP</h3>
+        <img src="{% static 'img/logo.jpg' %}" width="50" height="50" alt=""><h3 class="d-inline align-middle">MLRP</h3>
       </a>
       <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -90,13 +81,16 @@
                  <a href="#home" class="nav-link">HOME</a>
                </li>
                <li class="nav-item">
-                  <a href="#message" class="nav-link">MESSAGE</a>
+                <a href="{% url 'gallery' %}" class="nav-link">GALLERY</a>
+              </li>
+               <li class="nav-item">
+                  <a href="#contact" class="nav-link">MESSAGE</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#about" class="nav-link">ABOUT US</a>
+                    <a href="#message" class="nav-link">ABOUT US</a>
                   </li>
                 <li class="nav-item">
-                  <a href="#contact" class="nav-link">CONTACT</a>
+                  <a href="#footer" class="nav-link">CONTACT</a>
                 </li>
           </ul>
         </div>
@@ -154,7 +148,8 @@
               WHY OUR SCHOOL ?
             </h1>
             <p class="lead pb-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita sequi ratione, ipsum autem corporis!
+              Best for Least! That is our policy at MLRP Public School, Talbehat.
+              We strive to provide our students with state of the art education at minimal fees!
             </p>
           </div>
 
@@ -171,8 +166,9 @@
             </div>
 
             <div id="colllapse1" class="collapse show">
-              <div class="card-body ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consequuntur minima enim temporibus quis. Ab voluptates officiis cumque impedit dignissimos esse eius laudantium expedita eveniet numquam dicta repellat voluptas consequuntur tempore, sit molestiae, perspiciatis voluptatibus sint maxime error vel amet aliquam iste quos! Tempora maxime maiores nesciunt sed amet aliquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequuntur officia, reiciendis, hic ab ullam ea magnam quisquam dolore repellat aut. Voluptatum, animi ipsum quisquam, doloremque numquam laudantium nisi debitis, recusandae dolores consectetur iusto aspernatur esse. Assumenda voluptatibus natus necessitatibus nam iure quaerat quod in alias, quam, incidunt dolorum saepe.</div>
-
+              <div class="card-body ">The term 'education' encompasses more than just knowledge and knowing. 
+                  It is a harmonious blend of academia, arts, sports, emotions, attitudes, creativity, nature and life itself!
+                 And in the world we have built today, the one who is adept in all these areas is the one who succeeds.
             </div>
           </div>
         </div>
@@ -187,8 +183,10 @@
             </div>
 
             <div id="colllapse2" class="collapse show">
-              <div class="card-body ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo consequuntur minima enim temporibus quis. Ab voluptates officiis cumque impedit dignissimos esse eius laudantium expedita eveniet numquam dicta repellat voluptas consequuntur tempore, sit molestiae, perspiciatis voluptatibus sint maxime error vel amet aliquam iste quos! Tempora maxime maiores nesciunt sed amet aliquam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident consequuntur officia, reiciendis, hic ab ullam ea magnam quisquam dolore repellat aut. Voluptatum, animi ipsum quisquam, doloremque numquam laudantium nisi debitis, recusandae dolores consectetur iusto aspernatur esse. Assumenda voluptatibus natus necessitatibus nam iure quaerat quod in alias, quam, incidunt dolorum saepe.</div>
-
+              <div class="card-body ">As I walk down the hallways of the school every day, I can hear the chatter of eager minds,
+                 the shouts of excitement from the victorious athletes, the thump of dancer’s feet & the sound of melodious voices harmonizing. 
+                 The perpetual energy, movement & enthusiasm permeate the atmosphere at VPS. We are school with a difference.
+                 We value individualism, creativity and innovation and strive to nurture them in our students.
             </div>
           </div>
         </div>
@@ -204,11 +202,10 @@
         <div class="col">
             <div class="info-header mb-5">
                 <h1 class="text-primary pb-3">
-                  OUR FACULTY
+                  OUR STAFF
                 </h1>
-                <p class="lead pb-3">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat expedita sequi ratione, ipsum autem corporis!
-                </p>
+               <!--- <p class="lead pb-3">
+                 </p> -->
               </div>
         </div>
 
@@ -226,12 +223,7 @@
                   <div class="p-4">
                     <a href="{{ faculty.url_Facebook }}" class=""><i class="fa fa-facebook"> </i></a>
                   </div>
-                  <div class="p-4">
-                      <a href="{{ faculty.url_Twitter }}" class=""><i class="fa fa-twitter"> </i></a>
-                  </div>
-                  <div class="p-4">
-                      <a href="{{ faculty.url_Instagram }}" class=""><i class="fa fa-instagram"> </i></a>
-                  </div>
+                 
                 </div>
               </div>
             </div>
@@ -288,7 +280,7 @@
                {% endfor %}
                <center>
                  
-                <button type="submit" class="ml-auto mr-auto btn btn-danger">Save</button>
+                <button type="submit" class="ml-auto mr-auto btn btn-danger">Send</button>
                </center>
                </form>
             </div>
@@ -298,18 +290,14 @@
             <div class="card-body">
               <h3>Reach Us At </h3>
               <h2>Phone : </h2>
-              <h5 class="text-muted"> 9999999999</h5>
+              <h5 class="text-muted"> 9369381033</h5>
               <h2>Email : </h2>
-              <h5 class="text-muted">mlrppublicschool@gmail.com</h5>
+              <h5 class="text-muted">mlrpjhschool@gmail.com</h5>
               <div class="d-flex flex-row justify-content-center">
                 <div class="p-4">
-                  <a href="#" class=""><i class="fa fa-facebook"> </i></a>
+                  <a href="https://www.facebook.com/mlrppublicschool/" class=""><i class="fa fa-facebook"> </i></a>
                 </div>
-                <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-twitter"> </i></a>
-                </div>
-                <div class="p-4">
-                    <a href="#" class=""><i class="fa fa-instagram"> </i></a>
+               
                 </div>
               </div>
             </div>
@@ -322,64 +310,31 @@
        </div>
      </div>
    </section>
-
-    
-
-
-   <section id="map" class="bg-light py-5">
-     <div class="container">
-       <div class="row">
-         <div class="col-lg-6 align-self-center" >
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.386414194564!2d78.43091171500603!3d25.02095728397835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3979dba8727c6791%3A0xfe0cbe06e9971317!2sMLRP+PUBLIC+SCHOOL+TALBEHAT!5e0!3m2!1sen!2sin!4v1555588308869!5m2!1sen!2sin" width="auto" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
-         </div>
-         <div id="addres" class="col-lg-6 align-self-center">
-            <img src="{% static '../static/img/logo.jpg' %}" alt="logo" class="img-fluid" height="100%" width="100%">
-         </div>
-       </div>
-     </div>
-   </section>
-
-   
-
  <!----------- Footer ------------>
- <footer class="ct-footer">
+ <footer id="footer" class="ct-footer">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 ">
-            <h2 class=" ct-footer-list-header" ><span style="color:white">OUR SCHOOL</span></h2>
-            <ul>
-              <p>
-                <a href="">Company</a>
-              </p>
-              <li>
-                <a href="">Clients</a>
-              </li>
-              <li>
-                <a href="">News</a>
-              </li>
-              <li>
-                <a href="">Careers</a>
-              </li>
-            </ul>
+          <h2 class="ct-footer-list-header"><span style="color:white">OUR SCHOOL</span></h2>
+          <ul>
+            <p>
+                <a href="#home"  ><span style="color:white">HOME</span></a>
+            </p>
+            <p>
+                <a href="#mcontact"><span style="color:white">MESSAGE</span></a>
+
+            </p>
+            <p>
+                <a href="#message"><span style="color:white">ABOUT US</span></a>
+            </p>
+            <p>
+                <a href="#footer"><span style="color:white">CONTACT US</span></a>
+            </p>
+          </ul>  
         </div>
         <div class="col-lg-4">
+          
 
-            <h2 class="ct-footer-list-header"><span style="color:white">OUR SCHOOL</span></h2>
-            <ul>
-              <p>
-                  <a href="#home"  ><span style="color:white">HOME</span></a>
-              </p>
-              <p>
-                  <a href="#message"><span style="color:white">MESSAGE</span></a>
-
-              </p>
-              <p>
-                  <a href="#about"><span style="color:white">ABOUT US</span></a>
-              </p>
-              <p>
-                  <a href="#contact"><span style="color:white">CONTACT US</span></a>
-              </p>
-            </ul>
         </div>
         <div class="col-lg-4">
             <h2 class="ct-footer-list-header"><span style="color:white">CONTACT US</span></h2>
@@ -388,12 +343,11 @@
                 <address>
                   <span>LALITPUR ROAD<br></span>TARGUWAN<br>
                   TALBEHAT, LALITPUR, 284126<br>
-                  <span>Phone: <a href="tel:8009961474">(+91) 8009961474</a></span>
+                  <span>Phone: <a href="tel:9369381033">(+91) 9369381033</a></span>
                 </address>
               </p>
-                <a href="" target="_blank" class="uu"><img alt="facebook" src="https://www.solodev.com/assets/footer/facebook-white.png"></a>
-                <a href="" target="_blank" class="uu"><img alt="instagram" src="https://www.solodev.com/assets/footer/instagram-white.png"></a>
-                <a href="" target="_blank" class="uu"><img alt="twitter" src="https://www.solodev.com/assets/footer/twitter-white.png"></a>
+                <a href="https://www.facebook.com/mlrppublicschool/" target="_blank" class="uu"><img alt="facebook" src="https://www.solodev.com/assets/footer/facebook-white.png"></a>
+                
               </ul>
         </div>
       </div>

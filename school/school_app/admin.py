@@ -13,3 +13,7 @@ class MessageAdmin(admin.ModelAdmin):
 @admin.register(Notices)
 class NoticeAdmin(admin.ModelAdmin):
     pass
+
+@admin.register(Pictures)
+class PictureAdmin(admin.ModelAdmin):
+    pass
