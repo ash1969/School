@@ -18,17 +18,20 @@ import sys
 
 def content_file_name(instance,filename):
 	ext="png"
+	filename= str(instance.caption)+"."+str(ext)
+	return os.path.join('images/',filename)
+
+def content_file_name1(instance,filename):
+	ext="png"
 	filename= str(instance.name)+"."+str(ext)
 	return os.path.join('images/',filename)
 
 class Faculties(models.Model):
     name = models.CharField(max_length=100)
     designation = models.CharField(max_length=100)
-    description = models.TextField()
-    url_Facebook = models.URLField()
-    url_Instagram = models.URLField()
-    url_Twitter = models.URLField()
-    image = models.ImageField(upload_to=content_file_name)
+    description = models.TextField(default="")
+    url_Facebook = models.URLField(default="")
+    image = models.ImageField(upload_to=content_file_name1)
     # TODO
     # AUTOGENERATE DATETIME
     created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
@@ -76,3 +79,25 @@ class Notices(models.Model):
         verbose_name_plural = 'Notices'
     def __self__(self):
         return self.title
+
+class Pictures(models.Model):
+    caption = models.CharField(max_length=100)
+    description = models.CharField(max_length=1000)
+    image = models.ImageField(upload_to=content_file_name)
+    # TODO
+    # AUTOGENERATE DATETIME
+    created_at = models.DateTimeField(auto_now=False, auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True, auto_now_add=False)
+
+    def __str__(self):
+        return self.caption
+
+    def get_cname(self):
+        class_name = "Picture"
+        return class_name
+
+    class Meta:
+        managed = True
+        ordering = ['-created_at']
+        db_table = 'pictures'
+        verbose_name_plural = 'Pictures'        

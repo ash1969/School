@@ -17,3 +17,8 @@ def index(request):
             return HttpResponse("Invalid Credentials")
     args = {'notices': notices, 'faculties': faculties, 'form':form}
     return render(request, 'index.html', args)
+
+def gallery(request):
+    pictures = Pictures.objects.all()
+    args = {'pictures': pictures, }
+    return render(request, 'gallery.html', args)
